@@ -1,0 +1,63 @@
+@import '../vars.scss';
+
+.container {
+  height: max-content;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .box-img img {
+    height: auto;
+    padding: 5px;
+    width: 100%;
+
+    @supports (object-fit: cover) {
+      .box-img img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+  }
+
+  .overlay {
+    align-items: center;
+    background: #ff5672d9;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    transition: 0.3s;
+    width: 100%;
+  }
+
+  .overlay__desc {
+    color: $white-color;
+    text-align: center;
+
+    .panel-item__title {
+      font-family: $montserrat-font;
+      font-weight: bold;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    hr {
+      width: 80%;
+    }
+
+    .panel-item__desc {
+      font-family: $questrial-font;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+
+  &:hover .overlay {
+    transform: scale(1);
+  }
+}

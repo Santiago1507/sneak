@@ -1,0 +1,58 @@
+@import '../vars.scss';
+
+.content-panel {
+  margin-top: 30px;
+  position: relative;
+  width: 75%;
+
+  /*grid view*/
+  .content-panel__container.grid {
+    column-count: 3;
+    column-gap: 0;
+    display: block;
+    width: 100%;
+  }
+
+  /*row view*/
+  .content-panel__container.row {
+    column-count: 2;
+    column-gap: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .container {
+      max-height: 400px;
+      width: calc(50% - 22px);
+
+      .box-img img {
+        height: 100%;
+        padding: 5px;
+        width: 100%;
+
+        @supports (object-fit: cover) {
+          .box-img img {
+            height: 400px;
+            object-fit: cover;
+            object-position: center center;
+          }
+        }
+      }
+    }
+  }
+
+  .content__btn {
+    display: flex;
+    justify-content: center;
+
+    .content-pane__btn-more {
+      background: $main-color;
+      border: none;
+      color: $white-color;
+      cursor: pointer;
+      font-weight: 700;
+      margin: 20px 0px;
+      padding: 15px 30px;
+    }
+  }
+}

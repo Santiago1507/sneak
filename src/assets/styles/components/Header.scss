@@ -1,0 +1,74 @@
+@import '../vars.scss';
+
+.header {
+    z-index: 1;
+  align-items: center;
+  background-color: $white-color;
+  color: $gray-color;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  .header__img {
+    margin-left: 100px;
+    width: 190px;
+  }
+
+  .mobile{
+    display: none;
+  }
+
+  .header__menu{
+    margin-right: 100px;
+  }
+
+  .header__collapse-menu {
+    background: $gray-color;
+    display: none;
+    height: 2px;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    transition: 0.3s;
+    width: 30px;
+
+    &:before {
+      background: $gray-color;
+      content: '';
+      height: 2px;
+      left: 0;
+      position: absolute;
+      top: 10px;
+      width: 100%;
+    }
+
+    &:after {
+      background: $gray-color;
+      content: '';
+      height: 2px;
+      left: 0;
+      position: absolute;
+      top: -10px;
+      width: 100%;
+    }
+  }
+
+  .header__collapse-menu.collapse {
+    background: transparent;
+    transition: 0.3s;
+    width: 30px;
+
+    &:before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}

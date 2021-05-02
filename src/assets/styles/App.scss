@@ -1,0 +1,51 @@
+@import './vars.scss';
+@import './Media.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $white-color;
+  font-family: $questrial-font;
+  margin: 0;
+}
+
+.loading {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  width: 100vw;
+
+  &:after {
+    content: ' ';
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid $hover-color;
+    border-color: $hover-color transparent $hover-color transparent;
+    animation: loading 1.2s linear infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hidde{
+  display: none;
+}

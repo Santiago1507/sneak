@@ -1,0 +1,36 @@
+@import '../vars.scss';
+
+.banner {
+  align-items: center;
+  background: $main-color;
+  color: $white-color;
+  display: flex;
+  flex-direction: column;
+  font-family: $montserrat-font;
+  height: 100vh;
+  justify-content: center;
+  letter-spacing: 6px;
+  position: relative;
+  text-align: center;
+
+  .banner__title {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 12px;
+  }
+
+  .banner__info {
+    font-size: 10px;
+    font-weight: 400;
+    margin: 20px 0px;
+  }
+
+  .banner__btn {
+    background: $white-color;
+    border: none;
+    color: $main-color;
+    font-weight: 700;
+    margin: 20px 0px;
+    padding: 15px 30px;
+  }
+}

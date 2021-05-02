@@ -1,0 +1,129 @@
+@media only screen and (max-width: 768px) {
+  .header {
+    .header__menu {
+      background: $white-color;
+      height: 101vh;
+      margin-right: 0;
+      margin-top: 99px;
+      position: fixed;
+      right: 0px;
+      top: 0;
+      transform: translate(460px);
+      width: 50%;
+      z-index: 1;
+
+      ul {
+        background: $white-color;
+        flex-direction: column;
+        padding: 0 100px;
+
+        li {
+          margin: 20px 0;
+        }
+      }
+    }
+    .header__collapse-menu {
+      display: block;
+    }
+  }
+
+  .banner {
+    letter-spacing: 4px;
+    .banner__title {
+      font-size: 25px;
+    }
+    .banner__info {
+      font-size: 12px;
+    }
+  }
+
+  .overlay__desc {
+    .panel-item__title,
+    .panel-item__subTitle {
+      font-size: 13px;
+    }
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .header {
+    height: 70px;
+
+    .header__img {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+      width: 50px;
+      margin-left: 30px;
+    }
+
+    .header__menu {
+      height: 100vh;
+      margin-top: 70px;
+      width: 100%;
+
+      ul {
+        padding: 0 30px;
+      }
+    }
+
+    .header__collapse-menu,
+    .header__collapse-menu.collapse {
+      top: 35px;
+      width: 20px;
+      right: 30px;
+    }
+  }
+
+  .banner {
+    letter-spacing: 4px;
+    .banner__title {
+      font-size: 20px;
+      letter-spacing: 10px;
+    }
+    .banner__info {
+      font-size: 11px;
+      width: 70%;
+    }
+  }
+
+  .dist {
+    .header__menu {
+      width: 55%;
+
+      ul {
+        flex-direction: column;
+        text-align: center;
+
+        li a {
+          padding: 10px 50px;
+          margin: 0;
+        }
+      }
+    }
+
+    .content-panel {
+      width: 100%;
+    }
+
+    .content-panel__container.grid {
+      column-count: 2;
+      width: 96%;
+    }
+
+    .content-panel__container.row {
+      column-count: 1;
+
+      .container {
+        width: calc(99% - 22px);
+      }
+    }
+  }
+}

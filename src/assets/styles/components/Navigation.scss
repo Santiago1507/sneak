@@ -1,0 +1,29 @@
+@import '../vars.scss';
+
+.header__menu {
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 10px 0px;
+    padding: 0px;
+    position: relative;
+    text-align: right;
+    width: 100%;
+
+    li {
+      margin: 10px 0px;
+      a {
+        color: $gray-color;
+        padding: 10px 20px;
+        text-decoration: none;
+
+        &:hover,
+        &.active {
+          background: $hover-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
